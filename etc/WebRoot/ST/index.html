@@ -1,0 +1,157 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Personale Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="applijegleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />	
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<!--/script-->
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+</head>
+<body>
+<!--start-home-->
+		<ul class="side_nav">
+			<li><a class="active scroll" href="#main"></a></li>
+			<li><a class="scroll" href="#about"></a></li>
+			<li><a class="scroll" href="../main.jsp"></a></li>
+			<li><a href="#"></a></li>
+		</ul>
+		<div class="banner" id="home">
+			<div class="header-top">
+				<div class="container">	
+					<!--top-nav-->
+					<span class="menu"> </span>
+					<div class="top-menu">
+						<nav>
+							<ul class="cl-effect-16">
+								<li><a class="scorll" href="#main" data-hover="主页">主页</a></li>
+								<li><a class="scroll" href="#about" data-hover="方法介绍">方法介绍</a></li>
+								<li><a class="scroll" href="#experience" data-hover="处理流程">处理流程</a></li>
+								<li><a href="../main.jsp" data-hover="返回首页">返回首页</a></li>
+								<div class="clearfix"></div>
+							</ul>
+						</nav>		
+					</div>
+					<script src="js/menu_jquery.js"></script>
+								<script>
+									$("span.menu").click(function(){
+										$(".top-menu ul").slideToggle("slow" , function(){
+										});
+									});
+								</script>
+								<!-- script-for-menu -->
+
+				 <div class="clearfix"></div>
+			<!-- script-for-menu -->
+		    </div>
+		  </div>
+		<!--banner-->
+		<div class="main" id="main">
+			<div class="container">	  	 
+				  <div class="banner-info" style="color:#000">	
+						 <div class="logo">
+							  <a href="index.html"><h2><strong>基于卡方检验的特征选择方法</strong></h2></a>
+						  </div>
+						  <p style="color:#000;font-size:16px">卡方检验（Chi-square）最基本的思想就是通过观察实际值与理论值的偏差来确定理论的正确与否。具体做法为：设原假设为两个变量确实是独立的，然后观察实际值（观察值）与理论值（如果两者独立的情况下应该有的值）的偏差程度，如果偏差足够小，我们就认为误差是很自然的样本误差，是测量手段不够精确导致或者偶然发生的，此时就接受原假设，即两者确实是独立；如果偏差超过预设的阙值，我们就认为两者是相关的，即否定原假设，而接受备择假设。</p>
+						</div>
+						<div class="scroll-down">
+						 <h4>向下滑动</h4>
+						<a class="downarrow scroll" href="#about"><span></span></a>
+						</div>
+				  </div>
+			</div>
+		</div>
+	<!--about-->
+	<div class="about" id="about">
+	   <div class="container">
+	   <h3 class="tittle">方法介绍</h3>
+		  <div class="col-md-12 ab-grid text">
+		    <h3 style="color:#000">原理及计算公式</h3>
+			<p style="color:#000;font-size:18px">设：理论值为E，样本观察值为xi，则偏差程度可表示为：∑(1-n)(x-E)<br>
+			为消除正负偏差带来的的抵消，并对其求均值可变为：χ^2=∑(1-n)((x-E)^2)/E<br>
+			上式即为开方检验使用的差值衡量公式以下将在此基础上进行变形：</p>
+			<p style="color:#000;font-size:18px">可设：共有N条数据，其中M条数据属于类别T。其中包含词w且属于类别T的数据个数，命名为A；包含词w但不属于类别T的数据个数，命名为B；不包含词w但却属于类别T的数据个数，命名为C；既不包含词w也不属于类别T的数据个数，命名为D。<br>
+			以包含词w且属于类别T的数据个数为例。如原假设成立，即词w与类别T相互独立，那么词w在N条数据中应是等概率出现而无论数据是否属于类别T，则此概率应为：(A+B)/N<br>
+			则，数据中包含词w且属于类别T的数据个数的理论值（设为E_11）应为：E_11=(A+C)×(A+B)/N<br>
+			将观察值A和理论值E11带入式中可得：D_11=((A-(A+C)×(A+B)/N)^2)/((A+C)×(A+B)/N)<br>
+			同理可得：
+			D_12=((B-(B+D)×(A+B)/N)^2)/((B+D)×(A+B)/N)<br>
+			D_21=((C-(A+C)×(C+D)/N)^2)/((A+C)×(C+D)/N)<br>
+			D_22=((D-(B+D)×(C+D)/N)^2)/((B+D)×(C+D)/N)<br>
+			则词w与类别T的开方值为：χ^2=D_11+D_12+D_21+D_22<br></p>
+			<p style="color:#000;font-size:18px">对其进行化简可得：χ^2 (w,T)=(N(A×D-B×C)^2)/((A+B)×(A+C)×(B+D)×(C+D))<br>
+			由于在进行特征选择时并不关注卡方值的具体大小，只关注不同词的大小关系，且对于同一个原数据文件来说，数据的总数N和属于类别T的数据条数M是固定的，且M=A+C，N-M=B+D，则对于上式可进一步化简为：<br>
+			<strong>χ^2 (w,T)=(A×D-B×C)^2/((A+B)×(C+D))</strong>
+		  </div>
+		  <div class="clearfix"> </div>
+	   </div>
+    </div>	   
+	<!--//about-->
+	<!--experience-starts-->
+	<div class="experience" id="experience">
+		<div class="container">
+				<h3 class="tittle four">处理流程</h3>
+				<div class="experience-main">
+					<span class="devide-line"></span>
+					<div class="experience-left">
+						<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+						<h4>文本预处理</h4>
+						<h5>文本预处理包含文本分词，去除低频词和停用词，统计词频等操作</h5>
+						<p>分词：将文本数据从句子或段落分为词语后<br>
+						       去除停用词和低频词：去除某些出现频率低的词和对意义无关的停用词<br>
+						       统计词频：生成关于特征词的特征列表，统计其在文本中出现的次数</p>
+					</div>
+					<div class="experience-left-snd">
+						<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+					</div>
+					<div class="experience-right-snd">
+						<h4>卡方检验的特征选择方法</h4>
+						<p>调用原理中的公式，对统计词频后生成的特征列表中的每一个特征词，计算其特征值，并根据特征值大小进行排序。</p>
+					</div>
+					<div class="experience-left-trd">
+						<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
+						<h4>显示结果</h4>
+						<p>将特征列表直观的显示与网页上，并允许用户进行保存</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+		</div>
+	</div>
+		<script src="js/jquery.chocolat.js"></script>
+			<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+			<!--light-box-files -->
+			<script type="text/javascript" charset="utf-8">
+			$(function() {
+				$('.gallery a').Chocolat();
+			});
+			</script>
+
+	
+		<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files -->
+		<!-- Javascript calls -->
+		<script type="text/javascript" charset="utf-8">
+				$(function() {
+					$('#port a').Chocolat({overlayColor:'#000',leftImg:'images/leftw.gif',rightImg:'images/rightw.gif',closeImg:'images/closew.gif'});
+				});
+		</script>
+
+ 
+</body>
+</html>

@@ -1,0 +1,158 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Personale Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="applijegleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />	
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<!--/script-->
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+</head>
+<body>
+<!--start-home-->
+		<ul class="side_nav">
+			<li><a class="active scroll" href="#main"></a></li>
+			<li><a class="scroll" href="#about"></a></li>
+			<li><a class="scroll" href="#experience"></a></li>
+		</ul>
+		<div class="banner" id="home">
+			<div class="header-top">
+				<div class="container">	
+					<!--top-nav-->
+					<span class="menu"> </span>
+					<div class="top-menu">
+						<nav>
+							<ul class="cl-effect-16">
+								<li><a class="scorll" href="#main" data-hover="主页">主页</a></li>
+								<li><a class="scroll" href="#about" data-hover="方法介绍">方法介绍</a></li>
+								<li><a class="scroll" href="#experience" data-hover="处理流程">处理流程</a></li>
+								<div class="clearfix"></div>
+							</ul>
+						</nav>		
+					</div>
+					<script src="js/menu_jquery.js"></script>
+								<script>
+									$("span.menu").click(function(){
+										$(".top-menu ul").slideToggle("slow" , function(){
+										});
+									});
+								</script>
+								<!-- script-for-menu -->
+
+				 <div class="clearfix"></div>
+			<!-- script-for-menu -->
+		    </div>
+		  </div>
+		<!--banner-->
+		<div class="main" id="main">
+			<div class="container">	  	 
+				  <div class="banner-info" style="color:#000">	
+						 <div class="logo">
+							  <a href="index.html"><h2><strong>基于Fisher方法的特征选择方法</strong></h2></a>
+						  </div>
+						  <p style="color:#000;font-size:18px">Fisher线性判别的主要思想是：设在原始数据空间中有两种采样点，我们希望在原始数据空间上找到一条能将两种点尽可能的分离的线，即，使这两种样本点之间的差异平方差更大，同时同一类的样本点之间的离散程度更小。</p>
+						</div>
+						<div class="scroll-down">
+						 <h4>向下滑动</h4>
+						<a class="downarrow scroll" href="#about"><span></span></a>
+						</div>
+				  </div>
+			</div>
+		</div>
+	<!--about-->
+	<div class="about" id="about">
+	   <div class="container">
+	   <h3 class="tittle">方法介绍</h3>
+		  <div class="col-md-12 ab-grid text">
+		    <h3 style="color:#000">原理及计算公式</h3>
+			<p style="color:#000;font-size:18px">根据基本原理可以构造下面的公式：<br>
+			<strong>J(w)=((ave(m_1 )-ave(m_2 )))/(ave(S_1 )^2+ave(S_2 )^2)</strong><br>
+			其中，mi为平均值，Si2为i类间的方差，w为所求的方向向量。以上公式即为Fisher的线性判别率。以上的思想主要是要求出一个w使得J(W)最大。</p>
+			<p style="color:#000;font-size:18px">事实上,费雪的判别率可以提高评价的类别区分能力特性代替w维度的特性。为此,费雪的判别率重建:<br>
+			设需查验的特征词为tk，且文本分为两类积极类(Positive)和消极类(Negative)：<br>
+			<strong>J(w)=(E(t_k |P)-E(t_k |N))^2/(D(t_k |P)+D(t_k |P))</strong><br>
+			其中E(tk|P)和E(tk|N)是特征tk分别在积极类中的期望和消极类中的期望，D(tk|P)和D(tk|N)是特征tk分别在积极类中的方差和消极类中的方差。<br>
+			可以看出：(E(t_k |P)-E(t_k |N))^2表征不同类之间（类间）的分散程度，而（D(tk|P)+ D(tk|N)）表征相同类之间（类内）的分散程度。<br>
+			上式即为Fisher分数的定义。</p>
+			<p style="color:#000;font-size:18px">基于Fisher线性判别的特征选择存在两种方法，一是基于布尔变量的Fisher线性判别方法，二是基于频率的Fisher线性判别方法。在用Fisher线性判别原理对文本数据进行特征选择时，两种方法均可用，本文采用的是基于布尔变量的Fisher线性判别方法。<br>
+			设：特征w在积极类文本中出现次数为A，在消极类文本中出现的次数为B，且积极类数据共m条，消极类数据共n条。<br>
+			由此可得其条件期望和方差:<br>
+			E(t_k |P)=A/M<br>E(t_k |N)=B/N<br>D(t_k |P)=1/m ∑(1-m)(d_(p,i) (t_k)-A/M)^2<br>D(t_k |N)=1/n ∑(1-n)(d_(n,j) (t_k)-B/N)^2<br>
+			如设C=m-A，D=n-B，则上面的式子可改写成：
+			D(t_k |P)=(A^2+C^2)/m^3<br>D(t_k |N)=(B^2+D^2)/n^3<br>
+			<p style="color:#000;font-size:18px">
+			将E(tk|P)，E(tk|N)和D(tk|P)和D(tk|N)带入式中并化简，可得到：<br>
+			<strong>J(w)=n×m(n×A-m×B)^2/(n^3 (A^2+C^2)+m^3 (B^2+D^2))</strong><br></p>
+		  </div>
+		  <div class="clearfix"> </div>
+	   </div>
+    </div>	   
+	<!--//about-->
+	<!--experience-starts-->
+	<div class="experience" id="experience">
+		<div class="container">
+				<h3 class="tittle four">处理流程</h3>
+				<div class="experience-main">
+					<span class="devide-line"></span>
+					<div class="experience-left">
+						<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+						<h4>文本预处理</h4>
+						<h5>文本预处理包含文本分词，去除低频词和停用词，统计词频等操作</h5>
+						<p>分词：将文本数据从句子或段落分为词语后<br>
+						       去除停用词和低频词：去除某些出现频率低的词和对意义无关的停用词<br>
+						       统计词频：生成关于特征词的特征列表，统计其在文本中出现的次数</p>
+					</div>
+					<div class="experience-left-snd">
+						<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+					</div>
+					<div class="experience-right-snd">
+						<h4>基于Fisher分的特征选择方法</h4>
+						<p>调用原理中的公式，对统计词频后生成的特征列表中的每一个特征词，计算其特征值，并根据特征值大小进行排序。</p>
+					</div>
+					<div class="experience-left-trd">
+						<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
+						<h4>显示结果</h4>
+						<p>将特征列表直观的显示与网页上，并允许用户进行保存</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+		</div>
+	</div>
+		<script src="js/jquery.chocolat.js"></script>
+			<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+			<!--light-box-files -->
+			<script type="text/javascript" charset="utf-8">
+			$(function() {
+				$('.gallery a').Chocolat();
+			});
+			</script>
+
+	
+		<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files -->
+		<!-- Javascript calls -->
+		<script type="text/javascript" charset="utf-8">
+				$(function() {
+					$('#port a').Chocolat({overlayColor:'#000',leftImg:'images/leftw.gif',rightImg:'images/rightw.gif',closeImg:'images/closew.gif'});
+				});
+		</script>
+
+ 
+</body>
+</html>

@@ -1,0 +1,149 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Personale Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="applijegleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />	
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<!--/script-->
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+				});
+			});
+</script>
+</head>
+<body>
+<!--start-home-->
+		<ul class="side_nav">
+			<li><a class="active scroll" href="#main"></a></li>
+			<li><a class="scroll" href="#about"></a></li>
+			<li><a class="scroll" href="#experience"></a></li>
+		</ul>
+		<div class="banner" id="home">
+			<div class="header-top">
+				<div class="container">	
+					<!--top-nav-->
+					<span class="menu"> </span>
+					<div class="top-menu">
+						<nav>
+							<ul class="cl-effect-16">
+								<li><a class="scorll" href="#main" data-hover="主页">主页</a></li>
+								<li><a class="scroll" href="#about" data-hover="方法介绍">方法介绍</a></li>
+								<li><a class="scroll" href="#experience" data-hover="处理流程">处理流程</a></li>
+								<div class="clearfix"></div>
+							</ul>
+						</nav>		
+					</div>
+					<script src="js/menu_jquery.js"></script>
+								<script>
+									$("span.menu").click(function(){
+										$(".top-menu ul").slideToggle("slow" , function(){
+										});
+									});
+								</script>
+								<!-- script-for-menu -->
+
+				 <div class="clearfix"></div>
+			<!-- script-for-menu -->
+		    </div>
+		  </div>
+		<!--banner-->
+		<div class="main" id="main">
+			<div class="container">	  	 
+				  <div class="banner-info" style="color:#000">	
+						 <div class="logo">
+							  <a href="index.html"><h2><strong>基于互信息的特征选择方法</strong></h2></a>
+						  </div>
+						  <p style="color:#000;font-size:20px">互信息是用来评价一个事件的出现对于另一个事件的出现所贡献的信息量，互信息根据特征和类别共同出现的概率，度量特征和类别的相关性</p>
+						</div>
+						<div class="scroll-down">
+						 <h4>向下滑动</h4>
+						<a class="downarrow scroll" href="#about"><span></span></a>
+						</div>
+				  </div>
+			</div>
+		</div>
+	<!--about-->
+	<div class="about" id="about">
+	   <div class="container">
+	   <h3 class="tittle">方法介绍</h3>
+		  <div class="col-md-12 ab-grid text">
+		    <h3 style="color:#000">原理及计算公式</h3>
+			<p style="color:#000;font-size:18px">设有特征w和类别T，则互信息的计算公式如下式：MI(w,T)=log(P(w,T))/(P(w)×P(T))=log(P(w|T))/P(w)<br>
+			其中，P(w，T)表示训练集中既包含特征w又属于类别T的文本出现的概率，P(w)表示包含特征t的文本在训练集中出现的概率，P(T)表示训练集中属于类别T的文本的概率。<br>
+			上式表示的意义为：特征w在类别T中出现概率高，而在其他类别中出现概率低，即特征w和类别T相关性大，将获得较高的互信息值MI(w，T)。反之，将获得较低的互信息值MI(w，T)。<br>
+			其中，在对文本数据进行特征选择时，常采用一下公式：<br>
+			<strong>MI(w,T)=∑(1-n)P(w,T_i)log⁡(P(w,T_i))/(P(w)×P(T_i))</strong></p>
+			<p style="color:#000;font-size:18px">可设：共有N条数据，其中M条数据属于类别T。其中包含词w且属于类别T的数据个数，命名为A；包含词w但不属于类别T的数据个数，命名为B；不包含词w但却属于类别T的数据个数，命名为C；既不包含词w也不属于类别T的数据个数，命名为D。<br>
+			则可得：P(w,A)=A/N<br>P(w,B)=B/N<br>P(w,C)=C/N<br>P(w,C)=C/N<br>P1(w)=(A+B)/N<br>P2(w)=(C+D)/N<br>P(positive)=M/N<br>P(negative)=(N-M)/N<p>
+			<p style="color:#000;font-size:18px">带入上式可得：<br>
+			<strong>MI(w,T)=A/N×log(N×A)/((A+B)×M)+B/N×log(N×B)/((A+B)×(N-M))+C/N×log(N×C)/((C+D)×M)+D/N×log(N×D)/((C+D)×(N-M))</strong></p>
+		  </div>
+		  <div class="clearfix"> </div>
+	   </div>
+    </div>	   
+	<!--//about-->
+	<!--experience-starts-->
+	<div class="experience" id="experience">
+		<div class="container">
+				<h3 class="tittle four">处理流程</h3>
+				<div class="experience-main">
+					<span class="devide-line"></span>
+					<div class="experience-left">
+						<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+						<h4>文本预处理</h4>
+						<h5>文本预处理包含文本分词，去除低频词和停用词，统计词频等操作</h5>
+						<p>分词：将文本数据从句子或段落分为词语后<br>
+						       去除停用词和低频词：去除某些出现频率低的词和对意义无关的停用词<br>
+						       统计词频：生成关于特征词的特征列表，统计其在文本中出现的次数</p>
+					</div>
+					<div class="experience-left-snd">
+						<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+					</div>
+					<div class="experience-right-snd">
+						<h4>基于互信息的特征选择方法</h4>
+						<p>调用原理中的公式，对统计词频后生成的特征列表中的每一个特征词，计算其特征值，并根据特征值大小进行排序。</p>
+					</div>
+					<div class="experience-left-trd">
+						<span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
+						<h4>显示结果</h4>
+						<p>将特征列表直观的显示与网页上，并允许用户进行保存</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+		</div>
+	</div>
+		<script src="js/jquery.chocolat.js"></script>
+			<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+			<!--light-box-files -->
+			<script type="text/javascript" charset="utf-8">
+			$(function() {
+				$('.gallery a').Chocolat();
+			});
+			</script>
+
+	
+		<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files -->
+		<!-- Javascript calls -->
+		<script type="text/javascript" charset="utf-8">
+				$(function() {
+					$('#port a').Chocolat({overlayColor:'#000',leftImg:'images/leftw.gif',rightImg:'images/rightw.gif',closeImg:'images/closew.gif'});
+				});
+		</script>
+
+ 
+</body>
+</html>
