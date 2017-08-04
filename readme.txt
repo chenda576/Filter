@@ -1,1 +1,1 @@
-a guapi display
+a guapi and a xiguapi display
